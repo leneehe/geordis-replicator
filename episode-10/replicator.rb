@@ -1,3 +1,4 @@
+require 'pry'
 class Replicator
 
   # When the Enterprise calls Replicator.new, this method executes.
@@ -111,6 +112,7 @@ class Replicator
     # Go through recipe and transport each ingredient
     # from pantry to glass, one by one.
     @recipe.ingredients.each do |ingredient_name|
+
       @enterprise.transporter.energize(
         @enterprise.pantry.find_ingredient(ingredient_name),
         @enterprise.pantry.shelf,
@@ -121,7 +123,6 @@ class Replicator
 
   # This mixes the ingredients around inside the replicator.
   def mix
-
     # Abort if there is no glass inside the replicator.
     return unless glass_inside_replicator
 

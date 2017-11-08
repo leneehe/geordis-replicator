@@ -72,6 +72,7 @@ class Replicator
     #   glass_inside_replicator.inside.contents
     # then you may find the ingredients order has changed.
     # If it's successful, all the ingredients should still be in the glass.
+
     mix
 
     # This method adjusts the temperature of the contents in the glass.
