@@ -1,3 +1,4 @@
+require 'pry'
 class Replicator
 
   # When the Enterprise calls Replicator.new, this method executes.
@@ -121,7 +122,6 @@ class Replicator
 
   # This mixes the ingredients around inside the replicator.
   def mix
-
     # Abort if there is no glass inside the replicator.
     return unless glass_inside_replicator
 
@@ -134,7 +134,6 @@ class Replicator
   # This adjusts the temperature of the glass to
   # what the recipes calls for.
   def adjust_temperature
-
     # Abort if there is no glass inside the replicator.
     return unless glass_inside_replicator
 
@@ -148,7 +147,7 @@ class Replicator
     desired_temperature         = @recipe.temperature
     maximum_adjustments_allowed = 70
     number_of_adjustments       = 0
-
+# binding.pry
     # Keep adjusting temperature until desired temperature is reached
     # or too many attempts have been made to adjust temperature.
     # If successful, @glass will be set to the proper
