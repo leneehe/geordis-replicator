@@ -5,10 +5,11 @@
 class Transporter
 
   def initialize(enterprise)
+
     @enterprise = enterprise
     @power = false
     connect_to_power
-    obriens_repairs_transporter
+    # obriens_repairs_transporter
   end
 
   def connect_to_power
@@ -20,6 +21,7 @@ class Transporter
   end
 
   def energize(obj, from, to)
+
     return unless @power
 
     if @enterprise.reactor.draw_power(3)
