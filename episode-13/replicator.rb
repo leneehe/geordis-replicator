@@ -1,3 +1,4 @@
+require 'pry'
 class Replicator
 
   # When the Enterprise calls Replicator.new, this method executes.
@@ -104,7 +105,7 @@ class Replicator
 
   # This transports ingredients into the glass.
   def transport_ingredients_to_glass
-
+# binding.pry 
     # Abort if there is no glass inside the replicator.
     return unless glass_inside_replicator
 

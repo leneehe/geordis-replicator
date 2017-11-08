@@ -11,8 +11,8 @@ class Ingredient
     end.flatten.uniq
   end
 
-  def initialize(name)
-    @name = 'cherry'
+  def initialize(name)    
+    @name = name
   end
 
   def name
