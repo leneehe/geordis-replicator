@@ -1,3 +1,4 @@
+require 'pry'
 class Replicator
 
   # When the Enterprise calls Replicator.new, this method executes.
@@ -64,6 +65,7 @@ class Replicator
     #   glass_inside_replicator
     # And then to see what's inside the glass, use:
     #   glass_inside_replicator.inside.contents
+
     transport_ingredients_to_glass
 
     # This methods mixes the ingredients in the glass around.
@@ -77,6 +79,7 @@ class Replicator
     # If you read back `glass.temperature`, then it should be set
     # to the temperature the recipe calls for if this method executed properly.
     adjust_temperature
+#***ingredients goes wrong here!!!
 
     # This method moves the glass from @inside_replicator to @plate
     # so that the character can pick it up and drink it.
@@ -104,7 +107,7 @@ class Replicator
 
   # This transports ingredients into the glass.
   def transport_ingredients_to_glass
-
+# binding.pry 
     # Abort if there is no glass inside the replicator.
     return unless glass_inside_replicator
 
@@ -114,7 +117,7 @@ class Replicator
       @enterprise.transporter.energize(
         # Geordi is in a jokey mood and
         # reprograms the replicator
-        @enterprise.pantry.find_ingredient('banana'),
+        @enterprise.pantry.find_ingredient(ingredient_name),
         @enterprise.pantry.shelf,
         glass_inside_replicator.inside
       )
@@ -123,7 +126,6 @@ class Replicator
 
   # This mixes the ingredients around inside the replicator.
   def mix
-
     # Abort if there is no glass inside the replicator.
     return unless glass_inside_replicator
 
@@ -176,6 +178,7 @@ class Replicator
   end
 
   def transport_glass_to_reactor
+
     @enterprise.transporter.energize(
       glass_inside_replicator,
       @inside_replicator,

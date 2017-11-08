@@ -41,7 +41,7 @@ class Replicator
   # and then manually execute each method to ensure
   # it returns what's expect.
   def replicate(recipe)
-# binding.pry
+binding.pry
     # Setup an instance variable for the recipe
     # so that other methods can see what the recipe is
     @recipe = recipe
@@ -122,7 +122,6 @@ class Replicator
 
   # This mixes the ingredients around inside the replicator.
   def mix
-
     # Abort if there is no glass inside the replicator.
     return unless glass_inside_replicator
 
